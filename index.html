@@ -15,12 +15,15 @@
 
 <body>
 
+<!-- create a link for the top of the page -->
+<a id="page-top" class="link-to"></a>
+
 
 <!-- the page heading and navigation menu -->
     <table id="header-table">
         <tr>
             <td id="title-container">
-                <h2>Susan Bloch Leach, Therapist</h2>
+                <a class="section-link" href="#page-top"><h2>Susan Bloch Leach, Therapist</h2></a>
             </td>
             <td id="nav-container">
                 <a class="section-link" href="#about-section"><div class="nav-button">About</div></a>
@@ -35,18 +38,21 @@
 
 <!-- the welcome container on the page -->
     <div id="welcome-container">
-        <img src="WATERS.jpeg" alt="None">
-        <h1 id="welcome-text" class="ml16">Welcome</h1>
+        <img src="Images/WATER%202.jpeg" alt="None">
+        <div id="welcome-text-container">
+            <h1 id="welcome-text" class="ml16">Welcome</h1>
+            <h2 id="welcome-subtitle" class="ml16">I'm a therapist and social worker located in Long Island, NY.
+                Welcome to my site.</h2>
+        </div>
     </div>
-
 
 
 <!-- the about section of the page -->
     <a id="about-section" class="link-to"></a>
     <div id="about" class="site-section">
-            <h2 class="section-header">About</h2>
+            <h1 class="section-header">About</h1>
         <div class="about-row">
-            <div><img id="headshot" src="HEADSHOT.jpeg" alt="None"></div>
+            <div><img id="headshot" src="Images/HEADSHOT.jpeg" alt="None"></div>
             <div>
                 Change and transformation are a constant, inevitable and ongoing part of life, at times, we need
                 support. We will focus on helping you identify and understand your triggers, develop healthy
@@ -68,42 +74,12 @@
             </div>
         </div>
     </div>
-<!--        <table id="about-table">-->
-<!--            <tr>-->
-<!--                <td class="third-width">-->
-<!--                    <div id="headshot-container">-->
-<!--                        <img id="headshot" src="HEADSHOT.jpeg" alt="None">-->
-<!--                    </div>-->
-<!--                </td>-->
-<!--                <td class="third-width">-->
-<!--                    <p>-->
-<!--                        Change and transformation are a constant, inevitable and ongoing part of life, at times, we need-->
-<!--                        support. We will focus on helping you identify and understand your triggers, develop healthy-->
-<!--                        coping skills and new ways of thinking. We will work on finding new ways for you to manage such-->
-<!--                        feelings as being overwhelmed, anxious, depressed, stuck, afraid, stagnant, traumatized, in-->
-<!--                        pain, reactive, angry, and/or resentful, as these feelings result in dysfunction and negatively-->
-<!--                        impact relationships and wellness. Therapy is a process of discovery, growth and healing;-->
-<!--                        developing your strengths, and releasing that which no longer serves you.-->
-<!--                    </p>-->
-<!--                </td>-->
-<!--                <td class="third-width">-->
-<!--                    <p>-->
-<!--                        Through deep weekly conversations we will identify your current issues, your triggers, and help-->
-<!--                        you develop ways to deal with life in a better way - to help you live with more ease,-->
-<!--                        contentment, joy and peace.-->
-<!--&lt;!&ndash;                                <br><br><br>&ndash;&gt;-->
-<!--                        I invite you to let me share my multi-faceted individualized approach with you - to help you-->
-<!--                        heal, work through your “stuff” and find new comfort in your skin. In 2016, I completed my-->
-<!--                        200-hour yoga teacher training and have been seasonal service-corps at Omega institute for-->
-<!--                        holistic studies in Rhinebeck NY 2015-2019. EMDR trained.</p>-->
-<!--                </td>-->
-<!--            </tr>-->
-<!--        </table>-->
-<!--    </div>-->
 
+
+<!-- the specialties/issues section of the page -->
     <a id="specialties-section" class="link-to"></a>
     <div id="specialties" class="site-section">
-        <h2 class="section-header">Specialties and Issues</h2>
+        <h1 class="section-header">Specialties and Issues</h1>
         <table id="specialties-table">
             <tr>
                 <th class="gray-back third-width">Specialties</th>
@@ -195,7 +171,7 @@
             translateY: [-200,0],
             easing: "easeOutExpo",
             duration: 1400,
-            delay: (el, i) => 30 * i
+            delay: (el, i) => 70 * i
         });
 </script>
 </html>

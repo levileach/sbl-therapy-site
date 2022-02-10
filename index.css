@@ -7,7 +7,7 @@
     --site-background-color: #FFFFFF;
     --button-hover-color: #D0D0D0;
     --buton-hover-text: #4B4B4B;
-    --accent-color-1: rgb(229, 197, 15);
+    --accent-color-1: rgb(213, 181, 0);
     --nav-text-color: #767676;
 }
 
@@ -38,11 +38,12 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 
 /* each cell of the header table */
 #header-table td {
-    border-top: 4px solid var(--accent-color-1);
+    border-bottom: 4px solid var(--accent-color-1);
 }
 
 /* the container for the site title in the nav bar */
@@ -94,12 +95,14 @@ body {
 /* the container for the welcome text */
 #welcome-container {
     width: 100vw;
-    margin: 5vh auto;
+    margin: 2vh auto;
     color: white;
     position: relative;
     text-align: center;
     z-index: -1;
     padding: 0;
+    top: 0;
+    border-bottom: 5x solid var(--accent-color-1);
 }
 
 /* the image for the welcome text */
@@ -110,16 +113,25 @@ body {
     margin: 0;
 }
 
+#welcome-text-container {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translate(0, -50%);
+    width: 100%;
+}
+
 /* the welcome text at the top */
 #welcome-text {
     font-family: var(--welcome-font);
     font-style: italic;
     font-size: 500%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     margin: 0;
+}
+
+#welcome-subtitle {
+    font-family: var(--body-font);
+    margin: 20px auto;
 }
 
 /* the welcome class animation */
