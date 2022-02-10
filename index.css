@@ -1,0 +1,250 @@
+
+:root {
+    --header-font: "Lato", sans-serif;
+    --body-font: "Playfair Display", serif;
+    --welcome-font: "Playfair Display", serif;
+    --section-boder-color: #787575;
+    --site-background-color: #FFFFFF;
+    --button-hover-color: #D0D0D0;
+    --buton-hover-text: #4B4B4B;
+    --accent-color-1: rgb(229, 197, 15);
+    --nav-text-color: #767676;
+}
+
+/* the main document*/
+html {
+    background-color: var(--site-background-color);
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+/* the body of the document */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* the header/navigation bar of the site */
+#header-table {
+    margin: auto;
+    width: 100vw;
+    vertical-align: center;
+    position: sticky;
+    top: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+/* each cell of the header table */
+#header-table td {
+    border-top: 4px solid var(--accent-color-1);
+}
+
+/* the container for the site title in the nav bar */
+#title-container {
+    width: 40%;
+    text-align: left;
+    margin: auto;
+    font-family: var(--header-font);
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+/* the header element in the nav bar */
+#title-container h2 {
+    margin: 0;
+    font-weight: lighter;
+}
+
+/* the div containing the nav button */
+#nav-container {
+    text-align: right;
+    vertical-align: center;
+    padding: 0;
+    font-family: var(--header-font);
+    height: 100%;
+    margin-top: 0;
+    font-weight: lighter;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* the nav buttons in the nav bar */
+.nav-button {
+    display: inline-block;
+    padding: 12px 15px;
+    margin-right: 20px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, var(--accent-color-1) 50%);
+    background-position: -0% 0;
+    background-size: 200% auto;
+    transition: background-position 0.15s ease-out;
+}
+
+/* when a nav button is hovered */
+.nav-button:hover {
+    background-position: 0 -99.99%;
+}
+
+/* the container for the welcome text */
+#welcome-container {
+    width: 100vw;
+    margin: 5vh auto;
+    color: white;
+    position: relative;
+    text-align: center;
+    z-index: -1;
+    padding: 0;
+}
+
+/* the image for the welcome text */
+#welcome-container img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(50%);
+    margin: 0;
+}
+
+/* the welcome text at the top */
+#welcome-text {
+    font-family: var(--welcome-font);
+    font-style: italic;
+    font-size: 500%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+/* the welcome class animation */
+.ml16 {
+    overflow: hidden;
+}
+
+/* the letters of the welcome text */
+.ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+/* the invisible link (anchor) for a section */
+.link-to {
+    display: block;
+    position: relative;
+    top: -30px;
+    visibility: hidden;
+}
+
+
+/* a section of the website */
+.site-section {
+    width: 80vw;
+    border-bottom: 1px solid var(--section-boder-color);
+    margin: 2vh auto;
+    padding: 1vh 0;
+    text-align: center;
+}
+
+/* the header text of a section */
+.section-header {
+    font-family: var(--header-font);
+    font-weight: lighter;
+}
+
+/* a link (in the nav bar) to a section */
+.section-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* the table containing the specialties */
+#specialties-table {
+    margin: auto;
+    width: 100%;
+    vertical-align: top;
+}
+
+#specialties-table td {
+    vertical-align: top;
+    line-height: 1.5em;
+}
+
+/* an element that's one-third the width of its container */
+.third-width {
+    width: 33%;
+}
+
+/* an element that's two-thirds the width of its container */
+.two-thirds-width {
+    width: 67%;
+}
+
+/* a header element of table */
+th {
+    font-family: var(--header-font);
+    padding: 10px 0;
+}
+
+
+/* a row for the about section */
+.about-row {
+    display: flex;
+    font-family: var(--body-font);
+    font-weight: lighter;
+    box-sizing: content-box;
+}
+
+/* a div (column) in the about section */
+.about-row > div {
+    position: relative;
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    font-family: var(--body-font);
+    font-weight: lighter;
+    vertical-align: top;
+    top: 0;
+    line-height: 1.5em;
+}
+
+/* an image in the about section */
+.about-row > div img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+ul {
+    text-align: left;
+}
+
+
+#about-table td {
+    background-color: pink;
+    padding: 1vw;
+    text-align: justify;
+    /*font-size: larger;*/
+    vertical-align: top;
+    font-family: var(--body-font);
+    font-weight: lighter;
+}
+
+
+.spacer {
+    background-color: red;
+    height: 40vh;
+}
+
+
