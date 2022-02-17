@@ -3,12 +3,11 @@
     --header-font: "Lato", sans-serif;
     --body-font: "Playfair Display", serif;
     --welcome-font: "Playfair Display", serif;
-    --section-boder-color: #787575;
     --site-background-color: #FFFFFF;
-    --button-hover-color: #D0D0D0;
-    --buton-hover-text: #4B4B4B;
     --accent-color-1: rgb(213, 181, 0);
+    --accent-color-2: #787575;
     --nav-text-color: #767676;
+    --section-margin: 2vh;
 }
 
 /* the main document*/
@@ -17,24 +16,30 @@ html {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    min-width: 1120px;
 }
 
 /* the body of the document */
 body {
     margin: 0;
     padding: 0;
+    min-width: 1120px;
+}
+
+/* tables on the page */
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: auto;
 }
 
 /* the header/navigation bar of the site */
 #header-table {
-    margin: auto;
     width: 100vw;
     vertical-align: center;
     position: sticky;
     top: 0;
-    border-spacing: 0;
-    border-collapse: collapse;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
@@ -71,8 +76,6 @@ body {
     height: 100%;
     margin-top: 0;
     font-weight: lighter;
-    border-collapse: collapse;
-    border-spacing: 0;
 }
 
 /* the nav buttons in the nav bar */
@@ -95,14 +98,13 @@ body {
 /* the container for the welcome text */
 #welcome-container {
     width: 100vw;
-    margin: 2vh auto;
+    margin: 0 auto;
     color: white;
     position: relative;
     text-align: center;
     z-index: -1;
     padding: 0;
     top: 0;
-    border-bottom: 5x solid var(--accent-color-1);
 }
 
 /* the image for the welcome text */
@@ -113,6 +115,7 @@ body {
     margin: 0;
 }
 
+/* the div container for the welcome text */
 #welcome-text-container {
     position: absolute;
     left: 0;
@@ -127,11 +130,28 @@ body {
     font-style: italic;
     font-size: 500%;
     margin: 0;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
+/* the subtitle for the welcome section at the top */
 #welcome-subtitle {
     font-family: var(--body-font);
     margin: 20px auto;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* define the animation for fading something in */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* the welcome class animation */
@@ -157,9 +177,9 @@ body {
 /* a section of the website */
 .site-section {
     width: 80vw;
-    border-bottom: 1px solid var(--section-boder-color);
-    margin: 2vh auto;
-    padding: 1vh 0;
+    border-bottom: 1px solid var(--accent-color-2);
+    margin: var(--section-margin) auto;
+    padding: 5vh 0;
     text-align: center;
 }
 
@@ -167,6 +187,7 @@ body {
 .section-header {
     font-family: var(--header-font);
     font-weight: lighter;
+    margin: 5% 0;
 }
 
 /* a link (in the nav bar) to a section */
@@ -175,6 +196,10 @@ body {
     color: inherit;
 }
 
+/* the specialties section of the site */
+#specialties {
+    border: none;
+}
 
 /* the table containing the specialties */
 #specialties-table {
@@ -183,9 +208,68 @@ body {
     vertical-align: top;
 }
 
-#specialties-table td {
+#specialties-table td, th {
     vertical-align: top;
     line-height: 1.5em;
+    border-right: 1px solid var(--accent-color-1);
+}
+
+#specialties-table td:nth-child(2), th:nth-child(2) {
+    border-right: none;
+}
+
+#specialties-table ul {
+    list-style: none;
+}
+
+#specialties-list li:before {
+    content: '✓';
+    margin-right: 10px;
+    color: var(--accent-color-1);
+}
+
+
+/* the container for the welcome text */
+#hire-me-container {
+    width: 100vw;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: var(--section-margin) auto;
+}
+
+/* the image for the welcome text */
+#hire-me-container img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(50%);
+    margin: 0;
+}
+
+/* the subtitle for the welcome section at the top */
+#hire-me-text {
+    font-family: var(--body-font);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent-color-1);
+    margin: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+/* the header text for a column in a table */
+.column-header {
+    margin: 0;
+    font-family: var(--header-font);
+    font-weight: normal;
+}
+
+/* the header for the qualification section of the page */
+#qualifications-header {
+    margin-top: 10%;
 }
 
 /* an element that's one-third the width of its container */
@@ -208,8 +292,6 @@ th {
 /* a row for the about section */
 .about-row {
     display: flex;
-    font-family: var(--body-font);
-    font-weight: lighter;
     box-sizing: content-box;
 }
 
@@ -219,11 +301,8 @@ th {
     flex: 1;
     padding: 20px;
     text-align: justify;
-    font-family: var(--body-font);
-    font-weight: lighter;
     vertical-align: top;
     top: 0;
-    line-height: 1.5em;
 }
 
 /* an image in the about section */
@@ -243,20 +322,118 @@ ul {
 }
 
 
-#about-table td {
-    background-color: pink;
-    padding: 1vw;
-    text-align: justify;
-    /*font-size: larger;*/
+
+#submit-contact {
+    background-color: var(--accent-color-1);
+    border: none;
+    text-align: center;
+    padding: 2% 10%;
+    font-family: var(--header-font);
+    font-size: 1em;
+    box-shadow: 1px 1px 3px var(--accent-color-2);
+}
+
+#submit-contact:hover {
+    background-color: var(--accent-color-2);
+    color: var(--site-background-color);
+}
+
+#contact-table {
+    width: 100%;
+    text-align: left;
+}
+
+
+#contact-table td {
     vertical-align: top;
+}
+
+
+#contact-form-div {
+    vertical-align: top;
+    padding: 0 20px;
+}
+
+#contact-me-table {
+    width: 100%;
+}
+
+#contact-me-table td {
+    padding: 0 20px;
+}
+
+.contact-input-header {
+    padding-top: 20px;
+}
+
+.form-spacer {
+    height: 20px;
+}
+
+
+/* the star symbol for a required form input */
+.required {
+    color: red;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#contact-me-table p {
+    text-align: left;
+    margin: 0;
+    font-family: var(--header-font);
+    /*font-weight: lighter;*/
+}
+
+
+#contact-form-div input, textarea {
+    width: 100%;
+    height: 200%;
+    border: none;
+    box-shadow: 1px 1px 3px var(--accent-color-2);
+    resize: none;
+    font-size: 1.5em;
+}
+
+
+#contact-table h3 {
     font-family: var(--body-font);
+    font-weight: normal;
+    margin-top: 0;
+}
+
+
+/* icons on the site */
+.icon {
+    margin-right: 10px;
+}
+
+/* the site footer */
+#page-footer {
+    width: 100vw;
+    height: 100px;
+    margin-top: var(--section-margin);
+    background-color: var(--accent-color-1);
+    color: white;
+}
+
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-weight: lighter;
+    font-family: var(--header-font);
+    margin: 0;
 }
 
-
-.spacer {
-    background-color: red;
-    height: 40vh;
+.body-text {
+    line-height: 1.5em;
+    font-family: var(--body-font);
+    font-weight: normal;
 }
-
-

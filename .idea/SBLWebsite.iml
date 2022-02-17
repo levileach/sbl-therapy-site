@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="seamless-scroll-polyfill" level="application" />
     <orderEntry type="library" name="animejs" level="application" />
+    <orderEntry type="library" name="4daa4635cd" level="application" />
   </component>
 </module>
