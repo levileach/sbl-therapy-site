@@ -24,7 +24,6 @@ html, body {
     flex-basis: 100%;
     margin-bottom: 2rem;
     text-align: justify;
-    padding: 1rem;
 }
 
 /* the title element for a section */
@@ -46,5 +45,6 @@ html, body {
     .column {
         flex-basis: 33%;
         margin-bottom: 0;
+        padding: 1rem;
     }
 }
