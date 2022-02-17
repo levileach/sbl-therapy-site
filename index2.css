@@ -1,0 +1,439 @@
+
+:root {
+    --header-font: "Lato", sans-serif;
+    --body-font: "Playfair Display", serif;
+    --welcome-font: "Playfair Display", serif;
+    --site-background-color: #FFFFFF;
+    --accent-color-1: rgb(213, 181, 0);
+    --accent-color-2: #787575;
+    --nav-text-color: #767676;
+    --section-margin: 2vh;
+}
+
+/* the main document*/
+html {
+    background-color: var(--site-background-color);
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    min-width: 1120px;
+}
+
+/* the body of the document */
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 1120px;
+}
+
+/* tables on the page */
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+/* the header/navigation bar of the site */
+#header-table {
+    width: 100vw;
+    vertical-align: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* each cell of the header table */
+#header-table td {
+    border-bottom: 4px solid var(--accent-color-1);
+}
+
+/* the container for the site title in the nav bar */
+#title-container {
+    width: 40%;
+    text-align: left;
+    margin: auto;
+    font-family: var(--header-font);
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+/* the header element in the nav bar */
+#title-container h2 {
+    margin: 0;
+    font-weight: lighter;
+}
+
+/* the div containing the nav button */
+#nav-container {
+    text-align: right;
+    vertical-align: center;
+    padding: 0;
+    font-family: var(--header-font);
+    height: 100%;
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+/* the nav buttons in the nav bar */
+.nav-button {
+    display: inline-block;
+    padding: 12px 15px;
+    margin-right: 20px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, var(--accent-color-1) 50%);
+    background-position: -0% 0;
+    background-size: 200% auto;
+    transition: background-position 0.15s ease-out;
+}
+
+/* when a nav button is hovered */
+.nav-button:hover {
+    background-position: 0 -99.99%;
+}
+
+/* the container for the welcome text */
+#welcome-container {
+    width: 100vw;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+    text-align: center;
+    z-index: -1;
+    padding: 0;
+    top: 0;
+}
+
+/* the image for the welcome text */
+#welcome-container img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(50%);
+    margin: 0;
+}
+
+/* the div container for the welcome text */
+#welcome-text-container {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translate(0, -50%);
+    width: 100%;
+}
+
+/* the welcome text at the top */
+#welcome-text {
+    font-family: var(--welcome-font);
+    font-style: italic;
+    font-size: 500%;
+    margin: 0;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* the subtitle for the welcome section at the top */
+#welcome-subtitle {
+    font-family: var(--body-font);
+    margin: 20px auto;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* define the animation for fading something in */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* the welcome class animation */
+.ml16 {
+    overflow: hidden;
+}
+
+/* the letters of the welcome text */
+.ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+/* the invisible link (anchor) for a section */
+.link-to {
+    display: block;
+    position: relative;
+    top: -30px;
+    visibility: hidden;
+}
+
+
+/* a section of the website */
+.site-section {
+    width: 80vw;
+    border-bottom: 1px solid var(--accent-color-2);
+    margin: var(--section-margin) auto;
+    padding: 5vh 0;
+    text-align: center;
+}
+
+/* the header text of a section */
+.section-header {
+    font-family: var(--header-font);
+    font-weight: lighter;
+    margin: 5% 0;
+}
+
+/* a link (in the nav bar) to a section */
+.section-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* the specialties section of the site */
+#specialties {
+    border: none;
+}
+
+/* the table containing the specialties */
+#specialties-table {
+    margin: auto;
+    width: 100%;
+    vertical-align: top;
+}
+
+#specialties-table td, th {
+    vertical-align: top;
+    line-height: 1.5em;
+    border-right: 1px solid var(--accent-color-1);
+}
+
+#specialties-table td:nth-child(2), th:nth-child(2) {
+    border-right: none;
+}
+
+#specialties-table ul {
+    list-style: none;
+}
+
+#specialties-list li:before {
+    content: '✓';
+    margin-right: 10px;
+    color: var(--accent-color-1);
+}
+
+
+/* the container for the welcome text */
+#hire-me-container {
+    width: 100vw;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: var(--section-margin) auto;
+}
+
+/* the image for the welcome text */
+#hire-me-container img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(50%);
+    margin: 0;
+}
+
+/* the subtitle for the welcome section at the top */
+#hire-me-text {
+    font-family: var(--body-font);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent-color-1);
+    margin: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+/* the header text for a column in a table */
+.column-header {
+    margin: 0;
+    font-family: var(--header-font);
+    font-weight: normal;
+}
+
+/* the header for the qualification section of the page */
+#qualifications-header {
+    margin-top: 10%;
+}
+
+/* an element that's one-third the width of its container */
+.third-width {
+    width: 33%;
+}
+
+/* an element that's two-thirds the width of its container */
+.two-thirds-width {
+    width: 67%;
+}
+
+/* a header element of table */
+th {
+    font-family: var(--header-font);
+    padding: 10px 0;
+}
+
+
+/* a row for the about section */
+.about-row {
+    display: flex;
+    box-sizing: content-box;
+}
+
+/* a div (column) in the about section */
+.about-row > div {
+    position: relative;
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    vertical-align: top;
+    top: 0;
+}
+
+/* an image in the about section */
+.about-row > div img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+ul {
+    text-align: left;
+}
+
+
+
+#submit-contact {
+    background-color: var(--accent-color-1);
+    border: none;
+    text-align: center;
+    padding: 2% 10%;
+    font-family: var(--header-font);
+    font-size: 1em;
+    box-shadow: 1px 1px 3px var(--accent-color-2);
+}
+
+#submit-contact:hover {
+    background-color: var(--accent-color-2);
+    color: var(--site-background-color);
+}
+
+#contact-table {
+    width: 100%;
+    text-align: left;
+}
+
+
+#contact-table td {
+    vertical-align: top;
+}
+
+
+#contact-form-div {
+    vertical-align: top;
+    padding: 0 20px;
+}
+
+#contact-me-table {
+    width: 100%;
+}
+
+#contact-me-table td {
+    padding: 0 20px;
+}
+
+.contact-input-header {
+    padding-top: 20px;
+}
+
+.form-spacer {
+    height: 20px;
+}
+
+
+/* the star symbol for a required form input */
+.required {
+    color: red;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#contact-me-table p {
+    text-align: left;
+    margin: 0;
+    font-family: var(--header-font);
+    /*font-weight: lighter;*/
+}
+
+
+#contact-form-div input, textarea {
+    width: 100%;
+    height: 200%;
+    border: none;
+    box-shadow: 1px 1px 3px var(--accent-color-2);
+    resize: none;
+    font-size: 1.5em;
+}
+
+
+#contact-table h3 {
+    font-family: var(--body-font);
+    font-weight: normal;
+    margin-top: 0;
+}
+
+
+/* icons on the site */
+.icon {
+    margin-right: 10px;
+}
+
+/* the site footer */
+#page-footer {
+    width: 100vw;
+    height: 100px;
+    margin-top: var(--section-margin);
+    background-color: var(--accent-color-1);
+    color: white;
+}
+
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: lighter;
+    font-family: var(--header-font);
+    margin: 0;
+}
+
+.body-text {
+    line-height: 1.5em;
+    font-family: var(--body-font);
+    font-weight: normal;
+}
