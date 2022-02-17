@@ -1,15 +1,3 @@
-<?php
-
-if($_POST["message"]) {
-
-mail("levi.leachg@gmail.com", "Here is the subject line",
-
-$_POST["insert your message here"]. "From: levi.leachg@gmail.com");
-
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -197,8 +185,8 @@ $_POST["insert your message here"]. "From: levi.leachg@gmail.com");
                                 <td><p>Last Name <span class="required">*</span></p></td>
                             </tr>
                             <tr>
-                                <td><input id="contact-first-name" type="text"></td>
-                                <td><input id="contact-last-name" type="text"></td>
+                                <td><input id="contact-first-name" name="first-name" type="text"></td>
+                                <td><input id="contact-last-name" name="last-name" type="text"></td>
                             </tr>
                             <tr class="form-spacer"></tr>
                             <tr>
@@ -206,17 +194,22 @@ $_POST["insert your message here"]. "From: levi.leachg@gmail.com");
                                 <td><p>Phone</p></td>
                             </tr>
                             <tr>
-                                <td><input id="contact-email" type="text"></td>
-                                <td><input id="contact-phone" type="text"></td>
+                                <td><input id="contact-email" type="text" name="email"></td>
+                                <td><input id="contact-phone" type="text" name="phone"></td>
                             </tr>
                             <tr class="form-spacer"></tr>
-
-                            <tr><td colspan="2"><p>Subject <span class="required">*</span></p></td></tr>
-                            <tr><td colspan="2"><input id="contact-subject" type="text"></td></tr>
-                            <tr class="form-spacer"></tr>
-                            <tr><td colspan="2"><p>Message <span class="required">*</span></p></td></tr>
                             <tr>
-                                <td colspan="2"><textarea name="contact-first-name" cols="2" rows="4"></textarea></td>
+                                <td colspan="2"><p>Subject <span class="required">*</span></p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input id="contact-subject" type="text" name="email-subject"></td>
+                            </tr>
+                            <tr class="form-spacer"></tr>
+                            <tr>
+                                <td colspan="2"><p>Message <span class="required">*</span></p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><textarea name="email-message" cols="2" rows="4"></textarea></td>
                             </tr>
                             <tr class="form-spacer"></tr>
                             <tr class="align-center"><td colspan="2"><button id="submit-contact" type="submit">Submit</button></td></tr>
