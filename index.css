@@ -1,16 +1,25 @@
-
-body {
-    line-height: 1.5em;
+/* variables for the document */
+:root {
+    --title-font: "Lato", sans-serif;
+    --body-font: "Playfair Display", serif;
 }
 
+/* the whole document */
+html, body {
+    line-height: 1.5em;
+    font-family: var(--body-font);
+}
+
+
+/* the flex container for columns within a section */
 .column-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 85%;
-    margin: auto;
+    margin: 0 1rem;
 }
 
+/* a column within a section */
 .column {
     flex-basis: 100%;
     margin-bottom: 2rem;
@@ -18,16 +27,20 @@ body {
     padding: 1rem;
 }
 
-
-.box-title {
+/* the title element for a section */
+.section-title {
     width: 100%;
     display: block;
     text-align: center;
+    font-family: var(--title-font);
+    font-weight: lighter;
 }
 
 @media (min-width: 600px) {
     .column-container {
         flex-wrap: nowrap;
+        width: 85%;
+        margin: auto;
     }
 
     .column {
